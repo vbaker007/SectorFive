@@ -1,17 +1,23 @@
 require 'gosu'
 require_relative 'player'
+require_relative 'enemy'
 
 class SectorFive < Gosu::Window
   WIDTH = 800
   HEIGHT = 600
+  ENEMY_FREQUENCY = 0.5
   def initialize 
     super(800, 600)
     self.caption = 'Sector Five'
     @player = Player.new(self)
+    @enemies = []
   end
 
   def draw
     @player.draw
+    @enemies.each do |enemy|
+      enemy.draw
+    end
   end
 
   def update
@@ -19,6 +25,12 @@ class SectorFive < Gosu::Window
     @player.turn_right if button_down?(Gosu::KbRight)
     @player.accelerate if button_down?(Gosu::KbUp)
     @player.move
+    if rand < ENEMY_FREQUENCY
+      @enemies.push Enemy.new(self)
+    end
+    @enemies.each do |enemy|
+      enemy.move
+    end
   end
 end
 

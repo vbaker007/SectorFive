@@ -1,9 +1,12 @@
 == README
 Video game designed in Ruby logic; graphical output generated through the use of the Gosu 2D Gem Development Library.
 
-The premise of SectorFive is that it's a sprite-based game, drawing from the influences of 1970's video games like Atari.  The player has the ability to move a spaceship by pressing keys while aiming to defend their zone against enemy combatants. 
+The premise of Sector Five is that it's a sprite-based game, drawing from the influence of the 1970's video game, Atari.  
+
+In Sector Five, the player has the ability to move a spaceship by pressing keys while aiming to defend their zone against enemy combatants. 
+
 Objective: 
-Waves of enemy ships will descend from the top of the Gosu window, and the player needs to shoot them before they get to the bottom of the screen, and destroy the player's homebase. 
+Waves of enemy ships will descend from the top of the Gosu window, and the player needs to shoot them before they get to the bottom of the screen and destroy the player's homebase. 
 
 
 I am following the guidelines set forth in the book, “Learn Game Programming with Ruby, Bring Your Ideas to Life with Gosu”, written by Mark Sobkowicz, a published installment of The Pragmatic Programmers series.
